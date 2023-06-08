@@ -4,15 +4,15 @@ Simple task manager written in Bash, with [eww](https://github.com/elkowar/eww) 
 # Installation
 First Method (recommended)
 ```
-git clone https://github.com/qubiX00/tasker/ && cd tasker
+git clone https://github.com/qubiX00/tasker.git && cd tasker
 chmod +x tasker
-mv tasker /usr/local/bin/
+sudo mv tasker /usr/local/bin/
 ```
 Second Method
 ```
 Copy Source Code to File named tasker 
 chmod +x tasker
-mv tasker /usr/local/bin/
+sudo mv tasker /usr/local/bin/
 ```
 
 # Usage
