@@ -32,7 +32,13 @@ list_all_tasks() {
 }
 
 count_tasks() {
-    awk -F ' - ' '/\[Tasks\]/{flag=1;next} flag && NF {count++} END {print count}' "$config_file"
+    local task_count
+    if grep -q "\[Tasks\]" "$config_file"; then
+        task_count=$(awk -F ' - ' '/\[Tasks\]/{flag=1;next} flag && NF {count++} END {print count}' "$config_file")
+    else
+        task_count=0
+    fi
+    echo "${task_count:-0}"
 }
 
 make_task() {
